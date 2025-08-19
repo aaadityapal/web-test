@@ -1337,7 +1337,6 @@ footer::before {
     display: flex;
     gap: 8px;
     max-width: 280px;
-    -webkit-appearance: none; /* Fix Safari rendering */
 }
 
 .footer-newsletter-form input {
@@ -1348,8 +1347,6 @@ footer::before {
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
     font-size: 0.9rem;
-    -webkit-appearance: none; /* Fix Safari rendering */
-    appearance: none;
 }
 
 .footer-newsletter-form input::placeholder {
@@ -1365,8 +1362,6 @@ footer::before {
     cursor: pointer;
     transition: var(--transition);
     font-size: 0.8rem;
-    -webkit-appearance: none; /* Fix Safari rendering */
-    appearance: none;
 }
 
 .footer-subscribe-btn:hover {
@@ -1528,7 +1523,7 @@ footer::before {
     }
     
     .company-description {
-        text-align: justify;
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1537,67 +1532,21 @@ footer::before {
         justify-content: center;
     }
     
-    .newsletter-form {
+    .footer-newsletter-form {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     
-    .newsletter-form input {
+    .footer-newsletter-form input {
         width: 100%;
         max-width: 100%;
         margin-bottom: 10px;
     }
     
-    .subscribe-btn {
-        width: 100%;
-        padding: 12px;
-    }
-}
-
-/* Fix for iPhone Safari footer issues */
-@media (max-width: 480px) {
-    .footer-newsletter-form {
-        flex-direction: column;
-        gap: 10px;
-        max-width: 100%;
-    }
-    
-    .footer-newsletter-form input {
-        width: 100%;
-        border-radius: 4px;
-    }
-    
     .footer-subscribe-btn {
         width: 100%;
-        padding: 10px;
-    }
-    
-    .project-list li {
-        flex-wrap: wrap;
-    }
-    
-    .contact-info li {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .contact-info li i {
-        margin-bottom: 5px;
-    }
-    
-    /* Fix Safari-specific rendering issues */
-    .footer-column {
-        width: 100%;
-        flex-basis: 100%;
-        -webkit-flex-basis: 100%;
-    }
-    
-    /* Improve tap target sizes for mobile */
-    .footer-column ul li a,
-    .footer-policies a {
-        padding: 5px 0;
-        display: inline-block;
+        padding: 10px 12px;
     }
 }
 
@@ -1763,4 +1712,41 @@ footer::before {
     .hero h2 { font-size: 1.6rem; }
     .tagline { font-size: 0.9rem; letter-spacing: 0.2px; }
     .cta-button { padding: 9px 16px; font-size: 0.85rem; }
+}
+
+/* Fix for Safari on iOS devices */
+@supports (-webkit-touch-callout: none) {
+    /* iOS Safari specific styles */
+    .footer-newsletter-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .footer-newsletter-form input {
+        width: 100%;
+        -webkit-appearance: none;
+        border-radius: 4px;
+    }
+    
+    .footer-subscribe-btn {
+        width: 100%;
+        margin-top: 8px;
+        -webkit-appearance: none;
+    }
+    
+    @media (max-width: 480px) {
+        .footer-column {
+            flex: 1 1 100%;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info li {
+            flex-wrap: wrap;
+        }
+        
+        .footer-newsletter h4 {
+            padding: 0 10px;
+        }
+    }
 }
