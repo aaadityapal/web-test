@@ -1210,6 +1210,7 @@ footer::before {
     align-items: center;
     gap: 8px;
     margin-bottom: 8px;
+    flex-wrap: wrap;
 }
 
 .project-list i {
@@ -1523,9 +1524,11 @@ footer::before {
     }
     
     .company-description {
-        text-align: justify;
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
+        max-width: 100%;
+        padding: 0 10px;
     }
     
     .footer-policies {
@@ -1694,6 +1697,14 @@ footer::before {
     .hire-form input { padding: 12px 14px 12px 56px; border-radius: 12px; }
     .hire-form .submit-btn { padding: 12px; border-radius: 12px; }
     .project-grid { grid-template-columns: 1fr; }
+    
+    /* Footer improvements for iPhone XR and similar */
+    .footer-content { gap: 20px; }
+    .footer-links { gap: 20px; }
+    .footer-column { padding: 0 10px; }
+    .project-list li a { max-width: 220px; }
+    .footer-newsletter { margin-top: 15px; }
+    .footer-newsletter h4 { font-size: 0.9rem; }
 }
 
 /* Small phones (e.g., iPhone SE 2/3) */
@@ -1703,6 +1714,16 @@ footer::before {
     .tagline { font-size: 0.95rem; }
     .cta-button { padding: 10px 18px; font-size: 0.9rem; }
     .service-card { padding: 28px 22px; }
+    
+    /* Footer improvements for small phones */
+    .footer-column { width: 100%; }
+    .footer-newsletter-form { flex-direction: column; gap: 10px; }
+    .footer-newsletter-form input { width: 100%; }
+    .footer-subscribe-btn { width: 100%; }
+    .footer-policies { flex-direction: column; }
+    .contact-info li { flex-direction: column; align-items: center; text-align: center; }
+    .contact-info li i { margin-bottom: 5px; }
+    .project-list li { justify-content: center; }
 }
 
 /* Extra small legacy devices (<=320px) */
@@ -1711,4 +1732,11 @@ footer::before {
     .hero h2 { font-size: 1.6rem; }
     .tagline { font-size: 0.9rem; letter-spacing: 0.2px; }
     .cta-button { padding: 9px 16px; font-size: 0.85rem; }
+    
+    /* Additional footer fixes for very small screens */
+    .footer-logo img { height: 40px; }
+    .footer-logo-link { height: 40px; }
+    .footer-column h3 { font-size: 1.1rem; }
+    .social-icons { flex-wrap: wrap; justify-content: center; }
+    .social-icons a { width: 34px; height: 34px; }
 }
