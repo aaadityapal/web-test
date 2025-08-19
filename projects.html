@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects – ArchitectsHive</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <div id="site-header"></div>
+    <script>
+    (function(){
+      fetch('partials/header.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-header');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('headerLoaded'));
+        })
+        .catch(function(){});
+    })();
+    </script>
+
+    <main id="projects" class="projects-page" aria-labelledby="projectsTitle">
+        <section class="projects-hero">
+            <div class="hero-video" aria-hidden="true">
+                <video id="projectsHeroVideo" class="hero-video-el" autoplay muted loop playsinline webkit-playsinline preload="auto" crossorigin="anonymous" poster="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1920&q=80">
+                    <!-- Primary: city architecture time-lapse -->
+                    <source src="https://videos.pexels.com/video-files/854332/854332-hd_1280_720_24fps.mp4" type="video/mp4">
+                    <!-- Fallback: generic mp4 (for debugging autoplay) -->
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="container">
+                <section class="profile-card" role="region" aria-label="Company profile">
+                    <h1 class="profile-title" id="projectsTitle">Company Profile</h1>
+                    <p class="profile-text">At ArchitectsHive, we specialize in creating beautiful, functional spaces that make a lasting impression. Our experienced architects bring innovation and creativity to every project, creating unique designs that are tailored to fit our clients' needs. From residential to commercial architecture work, we strive to deliver high‑quality results that bring our clients’ visions to life.</p>
+                </section>
+            </div>
+        </section>
+
+        <section class="projects-controls" aria-label="Project filters and search">
+            <div class="container controls-inner">
+                <div class="search-box">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input id="searchInput" type="search" placeholder="Search by name, city, style…" aria-label="Search projects">
+                </div>
+                <div class="filters" role="tablist" aria-label="Filter by category">
+                    <button class="chip active" data-category="all" role="tab" aria-selected="true">All</button>
+                    <button class="chip" data-category="residential" role="tab" aria-selected="false">Residential</button>
+                    <button class="chip" data-category="commercial" role="tab" aria-selected="false">Commercial</button>
+                    <button class="chip" data-category="hospitality" role="tab" aria-selected="false">Hospitality</button>
+                    <button class="chip" data-category="institutional" role="tab" aria-selected="false">Institutional</button>
+                    <button class="chip" data-category="interior" role="tab" aria-selected="false">Interior</button>
+                </div>
+                <div class="sort-box">
+                    <label for="sortSelect">Sort</label>
+                    <select id="sortSelect" aria-label="Sort projects">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="areaDesc">Area: High to Low</option>
+                        <option value="areaAsc">Area: Low to High</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid-section">
+            <div class="container">
+                <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <!-- Lightbox viewer for project images -->
+        <div id="projectViewer" class="plan-viewer" aria-hidden="true">
+            <div class="plan-viewer-inner">
+                <button class="plan-close" id="projectViewerClose" aria-label="Close">&times;</button>
+                <button class="plan-nav prev" id="projectPrev" aria-label="Previous">&#10094;</button>
+                <img id="projectViewerImg" alt="Project preview">
+                <button class="plan-nav next" id="projectNext" aria-label="Next">&#10095;</button>
+                <div class="plan-viewer-caption" id="projectViewerCaption"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script>
+    (function(){
+      fetch('partials/footer.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-footer');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('footerLoaded'));
+        })
+        .catch(function(){});
+    })();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>
+
+

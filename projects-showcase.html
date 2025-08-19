@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase – ArchitectsHive</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="showcase.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <div id="site-header"></div>
+    <script>
+    (function(){
+      fetch('partials/header.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-header');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('headerLoaded'));
+        })
+        .catch(function(){});
+    })();
+    </script>
+
+    <main id="showcase" class="showcase-page" aria-labelledby="showcaseTitle">
+        <section class="showcase-hero">
+            <div class="hero-background" aria-hidden="true">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=80" alt="Modern architecture" width="1920" height="1080">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" alt="Residential architecture" width="1920" height="1080">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1577493340887-b7bfff550145?auto=format&fit=crop&w=1920&q=80" alt="Commercial architecture" width="1920" height="1080">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1920&q=80" alt="Institutional architecture" width="1920" height="1080">
+                </div>
+            </div>
+            <div class="blur-box-container">
+                <div class="blur-background-box">
+                    <h1 id="showcaseTitle"><span id="typewriter"></span></h1>
+                    <p class="showcase-tagline">At ArchitectsHive, we specialize in creating beautiful, functional spaces that make a lasting impression. Our experienced architects bring innovation and creativity to every project, creating unique designs that are tailored to fit our client's needs. From residential to commercial architecture work, we strive to deliver high-quality results that bring our clients' visions to life.</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="residential" class="project-category">
+            <div class="container">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <h2 class="category-title">Residential</h2>
+                        <p class="category-subtitle">Homes that reflect your personality and lifestyle</p>
+                    </div>
+                    <a href="projects-listing.html?category=residential" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-grid residential-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="commercial" class="project-category alt-bg">
+            <div class="container">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <h2 class="category-title">Commercial</h2>
+                        <p class="category-subtitle">Spaces designed for business success and customer engagement</p>
+                    </div>
+                    <a href="projects-listing.html?category=commercial" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-grid commercial-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="institutional" class="project-category">
+            <div class="container">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <h2 class="category-title">Institutional</h2>
+                        <p class="category-subtitle">Educational and healthcare facilities that nurture and heal</p>
+                    </div>
+                    <a href="projects-listing.html?category=institutional" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-grid institutional-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="hospitality" class="project-category alt-bg">
+            <div class="container">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <h2 class="category-title">Hospitality</h2>
+                        <p class="category-subtitle">Creating memorable experiences through thoughtful design</p>
+                    </div>
+                    <a href="projects-listing.html?category=hospitality" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-grid hospitality-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="interior" class="project-category">
+            <div class="container">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <h2 class="category-title">Interior Design</h2>
+                        <p class="category-subtitle">Transforming spaces with aesthetics and functionality</p>
+                    </div>
+                    <a href="projects-listing.html?category=interior" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-grid interior-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="urban" class="project-category alt-bg">
+            <div class="container">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <h2 class="category-title">Urban Planning</h2>
+                        <p class="category-subtitle">Designing communities and public spaces for sustainable living</p>
+                    </div>
+                    <a href="projects-listing.html?category=urban" class="view-all-link">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="category-grid urban-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Project?</h2>
+                    <p>Let's collaborate to bring your architectural vision to life. Our team of experts is ready to guide you through every step of the process.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="cta-button">Contact Us</a>
+                        <a href="#" class="cta-button secondary" id="requestCallBtn">Request a Call</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Lightbox -->
+        <div id="projectLightbox" class="project-lightbox" aria-hidden="true">
+            <div class="lightbox-content">
+                <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+                <div class="lightbox-media">
+                    <div id="lightboxCarousel" class="lightbox-carousel"></div>
+                </div>
+                <div class="lightbox-info">
+                    <h3 id="lightboxTitle"></h3>
+                    <div class="lightbox-meta" id="lightboxMeta"></div>
+                    <div class="lightbox-description" id="lightboxDescription"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script>
+    (function(){
+      fetch('partials/footer.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-footer');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('footerLoaded'));
+        })
+        .catch(function(){});
+    })();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="showcase.js"></script>
+    <script src="showcase-nav.js"></script>
+</body>
+</html>

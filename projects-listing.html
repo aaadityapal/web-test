@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - ArchitectsHive</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="showcase.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <link rel="stylesheet" href="projects-listing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <div id="site-header"></div>
+    <script>
+    (function(){
+      fetch('partials/header.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-header');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('headerLoaded'));
+        })
+        .catch(function(){});
+    })();
+    </script>
+
+    <main id="projects-listing" class="projects-listing-page">
+        <!-- Category Header Banner -->
+        <section class="category-banner">
+            <div class="category-banner-bg">
+                <div class="overlay"></div>
+                <img id="categoryBannerImage" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=80" alt="Category Banner">
+            </div>
+            <div class="blur-box-container">
+                <div class="blur-background-box">
+                    <h1 id="categoryTitle">All Projects</h1>
+                    <p id="categoryDescription">Explore our complete portfolio of architectural projects across various domains.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-wrapper">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category</label>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="residential">Residential</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="institutional">Institutional</option>
+                            <option value="hospitality">Hospitality</option>
+                            <option value="interior">Interior Design</option>
+                            <option value="urban">Urban Planning</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="yearFilter">Year</label>
+                        <select id="yearFilter" class="filter-select">
+                            <option value="all">All Years</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                    <div class="filter-group search-group">
+                        <label for="searchInput">Search</label>
+                        <div class="search-input-wrapper">
+                            <input type="text" id="searchInput" placeholder="Search projects...">
+                            <button id="searchButton"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="active-filters" id="activeFilters">
+                    <!-- Active filters will be added here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-listing-grid">
+            <div class="container">
+                <div class="projects-count">
+                    <span id="projectsCount">Showing all projects</span>
+                </div>
+                <div id="projectsGrid" class="projects-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No projects found</h3>
+                        <p>Try adjusting your filters or search terms.</p>
+                        <button id="resetFilters" class="reset-button">Reset All Filters</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Load More Button -->
+        <section class="load-more-section">
+            <div class="container">
+                <button id="loadMoreBtn" class="load-more-btn">
+                    <span>Load More</span>
+                    <i class="fas fa-spinner fa-spin" style="display: none;"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Project Lightbox - Redesigned -->
+        <div id="projectLightbox" class="project-lightbox" aria-hidden="true">
+            <div class="lightbox-overlay"></div>
+            <div class="lightbox-content">
+                <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <div class="lightbox-container">
+                    <!-- Left side - Image Carousel -->
+                    <div class="lightbox-media">
+                        <div id="lightboxCarousel" class="lightbox-carousel">
+                            <!-- Carousel content will be added by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Right side - Project Information -->
+                    <div class="lightbox-info">
+                        <div class="lightbox-header">
+                            <h2 id="lightboxTitle" class="lightbox-title"></h2>
+                            <div class="lightbox-category" id="lightboxCategory"></div>
+                        </div>
+                        
+                        <div class="lightbox-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span id="lightboxLocation"></span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span id="lightboxYear"></span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span id="lightboxArea"></span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-user"></i>
+                                <span id="lightboxArchitect"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="lightbox-details">
+                            <div class="detail-section">
+                                <h3>Project Details</h3>
+                                <div class="detail-grid">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Client</span>
+                                        <span id="lightboxClient" class="detail-value"></span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Site Address</span>
+                                        <span id="lightboxAddress" class="detail-value"></span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Completion Date</span>
+                                        <span id="lightboxCompletion" class="detail-value"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="description-section">
+                                <h3>About This Project</h3>
+                                <div class="lightbox-description" id="lightboxDescription"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="lightbox-actions">
+                            <a href="#" class="action-button primary">
+                                <i class="fas fa-envelope"></i> Inquire About This Project
+                            </a>
+                            <a href="#" class="action-button secondary">
+                                <i class="fas fa-share-alt"></i> Share
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script>
+    (function(){
+      fetch('partials/footer.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-footer');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('footerLoaded'));
+        })
+        .catch(function(){});
+    })();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="showcase.js"></script>
+    <script src="showcase-nav.js"></script>
+    <script src="projects-listing.js"></script>
+</body>
+</html>

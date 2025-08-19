@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectural Excellence - Modern Design Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" imagesrcset="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=640&q=70 640w, https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1024&q=75 1024w, https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80 1920w" imagesizes="100vw">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <div id="site-header"></div>
+    <script>
+    (function(){
+      fetch('partials/header.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-header');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('headerLoaded'));
+        })
+        .catch(function(){ /* ignore if missing */ });
+    })();
+    </script>
+
+    <!-- Request a Call Modal -->
+    <div id="requestCallModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="requestCallTitle">
+            <button class="modal-close" id="closeRequestCall" aria-label="Close">&times;</button>
+            <h3 id="requestCallTitle">Request a Call</h3>
+            <form id="requestCallForm">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="fullName" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" name="contactNumber" placeholder="Contact Number" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            </div>
+        </div>
+
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="slide">
+                <img loading="eager" fetchpriority="high" src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Modern architecture" width="1920" height="1080">
+            </div>
+            <div class="slide">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="City architecture" width="1920" height="1080">
+            </div>
+            <div class="slide">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Building exterior" width="1920" height="1080">
+            </div>
+            <div class="slide">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Architectural interior" width="1920" height="1080">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h2 class="animate-text"><span id="typewriter" aria-label="typewriter"></span><span class="caret" aria-hidden="true"></span></h2>
+            <p class="animate-text tagline">Redefining the limits of <span class="type-accent">Architecture</span></p>
+            <a href="#projects" class="cta-button">View Our Work</a>
+        </div>
+
+        <!-- Centered feature icons -->
+        <div class="hero-icons" aria-label="Key benefits">
+            <div class="hero-icon">
+                <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                <div class="hero-icon-text"><span class="accent">7 Days</span><br>Guaranteed Delivery</div>
+            </div>
+            <span class="hero-icon-divider" aria-hidden="true"></span>
+            <div class="hero-icon">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+                <div class="hero-icon-text"><span class="accent">Online</span><br>Secure Payments</div>
+            </div>
+            <span class="hero-icon-divider" aria-hidden="true"></span>
+            <div class="hero-icon">
+                <i class="fas fa-headset" aria-hidden="true"></i>
+                <div class="hero-icon-text"><span class="accent">24*7</span><br>Customer Support</div>
+            </div>
+        </div>
+        <div class="hire-form">
+            <h3>Hire Us Now</h3>
+            <form id="hireForm">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" name="number" placeholder="Your Number" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Your Email">
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+        
+        <!-- Left-corner animated badge -->
+        <div class="corner-badge" aria-label="Fastest Growing, Tech-Enabled Design Partner for your Construction">
+            <div class="badge-left">
+                <span>Fastest</span><br>
+                <span>Growing</span>
+                        </div>
+            <div class="badge-divider" aria-hidden="true"></div>
+            <div class="badge-right">
+                <span>Tech-Enabled Design</span><br>
+                <span>Partner for your</span><br>
+                <span>Construction</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats Section (unique classes) -->
+    <section id="impact" class="impact-stats-section">
+        <div class="container">
+            <h2 class="impact-title">Your <span class="impact-hover-accent">Dream</span>, Our <span class="impact-hover-accent">Design</span>, We <span class="impact-hover-accent">Construct</span></h2>
+            <div class="impact-stats-grid">
+                <div class="impact-stat-card">
+                    <div class="impact-stat-number" data-target="160" data-suffix="+">0</div>
+                    <div class="impact-stat-label">Projects</div>
+                    </div>
+                <div class="impact-stat-card">
+                    <div class="impact-stat-number" data-target="95" data-suffix="+">0</div>
+                    <div class="impact-stat-label">Clients</div>
+                </div>
+                <div class="impact-stat-card">
+                    <div class="impact-stat-number" data-target="30" data-suffix="+">0</div>
+                    <div class="impact-stat-label">Teams</div>
+                    </div>
+                <div class="impact-stat-card">
+                    <div class="impact-stat-number" data-target="15" data-suffix="+">0</div>
+                    <div class="impact-stat-label">Years of Experience</div>
+                </div>
+                <div class="impact-stat-card">
+                    <div class="impact-stat-number" data-target="16" data-suffix="+">0</div>
+                    <div class="impact-stat-label">Cities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- We Ensure (services and commitments) -->
+    <section id="ensure" class="ensure-section">
+        <div class="container">
+            <h2 class="ensure-title">We Ensure</h2>
+            <p class="ensure-subtitle">Our Services and Commitments</p>
+            <div class="ensure-scroller" aria-label="Our services and commitments">
+                <div class="ensure-track">
+                    <!-- Set A -->
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-drafting-compass animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Quality Design</h3><p class="ensure-card-text">Thoughtful, functional and aesthetic designs.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-clock animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">On‑Time Delivery</h3><p class="ensure-card-text">Disciplined planning to meet timelines.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-handshake animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Transparent Process</h3><p class="ensure-card-text">Clear communication at every stage.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-shield-alt animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Secure Payments</h3><p class="ensure-card-text">Safe, documented transactions.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-headset animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">24/7 Support</h3><p class="ensure-card-text">Help before and after delivery.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-rupee-sign animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Cost Optimisation</h3><p class="ensure-card-text">Value‑engineered solutions to save cost.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-hard-hat animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Site Safety</h3><p class="ensure-card-text">Strict adherence to safety practices.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-cubes animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Material Quality</h3><p class="ensure-card-text">Verified materials from trusted vendors.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-seedling animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Sustainable</h3><p class="ensure-card-text">Environment‑conscious approach.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-user-check animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Client Satisfaction</h3><p class="ensure-card-text">We measure success by your smile.</p></div>
+                    <!-- Set B (duplicate for seamless loop) -->
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-drafting-compass animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Quality Design</h3><p class="ensure-card-text">Thoughtful, functional and aesthetic designs.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-clock animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">On‑Time Delivery</h3><p class="ensure-card-text">Disciplined planning to meet timelines.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-handshake animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Transparent Process</h3><p class="ensure-card-text">Clear communication at every stage.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-shield-alt animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Secure Payments</h3><p class="ensure-card-text">Safe, documented transactions.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-headset animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">24/7 Support</h3><p class="ensure-card-text">Help before and after delivery.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-rupee-sign animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Cost Optimisation</h3><p class="ensure-card-text">Value‑engineered solutions to save cost.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-hard-hat animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Site Safety</h3><p class="ensure-card-text">Strict adherence to safety practices.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-cubes animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Material Quality</h3><p class="ensure-card-text">Verified materials from trusted vendors.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-seedling animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Sustainable</h3><p class="ensure-card-text">Environment‑conscious approach.</p></div>
+                    <div class="ensure-card"><div class="ensure-icon"><i class="fas fa-user-check animated-icon" aria-hidden="true"></i></div><h3 class="ensure-card-title">Client Satisfaction</h3><p class="ensure-card-text">We measure success by your smile.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products / Custom House Plans -->
+    <section id="featured-products" class="products-section">
+        <div class="container">
+            <h2 class="products-title">Custom House Plans Designed By Architectshive</h2>
+            <p class="custom-plans-subtitle">Tailored floor plans and elevations crafted by our expert architects to match your lifestyle and budget.</p>
+            <div class="products-grid" id="productsGrid" aria-live="polite"></div>
+            <!-- Lightbox for product posters -->
+            <div id="productViewer" class="plan-viewer" aria-hidden="true">
+                <div class="plan-viewer-inner">
+                    <button class="plan-close" id="productViewerClose" aria-label="Close">&times;</button>
+                    <button class="plan-nav prev" id="productPrev" aria-label="Previous">&#10094;</button>
+                    <img id="productViewerImg" alt="Product preview">
+                    <button class="plan-nav next" id="productNext" aria-label="Next">&#10095;</button>
+                    <div class="plan-viewer-caption" id="productViewerCaption"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ 
+
+  
+
+
+
+    <div id="site-footer"></div>
+    <script>
+    (function(){
+      fetch('partials/footer.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-footer');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('footerLoaded'));
+        })
+        .catch(function(){ /* ignore if missing */ });
+    })();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

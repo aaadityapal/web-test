@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ArchitectsHive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <div id="site-header"></div>
+    <script>
+    (function(){
+      fetch('partials/header.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-header');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('headerLoaded'));
+        })
+        .catch(function(){ /* ignore if missing */ });
+    })();
+    </script>
+
+    <!-- Request a Call Modal (kept for header CTA compatibility) -->
+    <div id="requestCallModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="requestCallTitle">
+            <button class="modal-close" id="closeRequestCall" aria-label="Close">&times;</button>
+            <h3 id="requestCallTitle">Request a Call</h3>
+            <form id="requestCallForm">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="fullName" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" name="contactNumber" placeholder="Contact Number" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <main id="about" class="about-page" aria-labelledby="aboutTitle">
+        <!-- About Hero (mirrors Projects hero style) -->
+        <section class="about-hero">
+            <div class="hero-media" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80" alt="Team collaboration meeting" />
+            </div>
+            <div class="container">
+                <section class="profile-card" role="region" aria-label="About architectshive">
+                    <h1 class="profile-title" id="aboutTitle">About architectshive</h1>
+                    <p class="profile-text">At ArchitectsHive, we specialize in creating beautiful, functional spaces that make a lasting impression. Our experienced team brings innovation and craft to every project, delivering tailored solutions with transparency, quality and on‑time delivery.</p>
+                </section>
+            </div>
+        </section>
+
+    <!-- Our Story -->
+    <section class="about-section about-story">
+        <div class="container about-grid">
+            <div class="about-col">
+                <h2 class="section-heading">Our Story</h2>
+                <p>Founded in 2010, ArchitectsHive has evolved into a multi‑disciplinary studio delivering end‑to‑end architectural design solutions. We bring together strategy, design craft and engineering discipline to deliver spaces that are beautiful, practical and future‑ready.</p>
+                <p>From residential to commercial and institutional projects, our team partners with clients from concept to completion, ensuring transparency, quality and on‑time delivery.</p>
+            </div>
+            <div class="about-col about-stats">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="160">0</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="95">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="16">0</div>
+                    <div class="stat-label">Cities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team (photo gallery with designations) -->
+    <section class="about-section our-team">
+        <div class="container">
+            <h2 class="section-heading">Our Team</h2>
+
+            <h3 class="team-group-title">Leadership</h3>
+            <div class="team-gallery">
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=640&q=70" alt="A. Sharma – Principal Architect">
+                    </div>
+                    <h3 class="member-name">A. Sharma</h3>
+                    <p class="member-role">Principal Architect</p>
+                    <p class="member-edu">M.Arch, SPA Delhi</p>
+                    <a class="member-email" href="mailto:a.sharma@architectshive.com">a.sharma@architectshive.com</a>
+                </article>
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=640&q=70" alt="P. Desai – Project Director">
+                    </div>
+                    <h3 class="member-name">P. Desai</h3>
+                    <p class="member-role">Project Director</p>
+                    <p class="member-edu">MBA (Project Management), IIT Delhi</p>
+                    <a class="member-email" href="mailto:p.desai@architectshive.com">p.desai@architectshive.com</a>
+                </article>
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=640&q=70" alt="K. Mehta – Design Strategist">
+                    </div>
+                    <h3 class="member-name">K. Mehta</h3>
+                    <p class="member-role">Design Strategist</p>
+                    <p class="member-edu">B.Arch, SPA Bhopal</p>
+                    <a class="member-email" href="mailto:k.mehta@architectshive.com">k.mehta@architectshive.com</a>
+                </article>
+            </div>
+
+            <h3 class="team-group-title">Architecture</h3>
+            <div class="team-gallery">
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=640&q=70" alt="N. Verma – Senior Architect">
+                    </div>
+                    <h3 class="member-name">N. Verma</h3>
+                    <p class="member-role">Senior Architect</p>
+                    <p class="member-edu">B.Arch, CEPT University</p>
+                    <a class="member-email" href="mailto:n.verma@architectshive.com">n.verma@architectshive.com</a>
+                </article>
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=640&q=70" alt="T. Iyer – Architect">
+                    </div>
+                    <h3 class="member-name">T. Iyer</h3>
+                    <p class="member-role">Architect</p>
+                    <p class="member-edu">B.Arch, Jamia Millia Islamia</p>
+                    <a class="member-email" href="mailto:t.iyer@architectshive.com">t.iyer@architectshive.com</a>
+                </article>
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=640&q=70" alt="S. Patel – Architect">
+                    </div>
+                    <h3 class="member-name">S. Patel</h3>
+                    <p class="member-role">Architect</p>
+                    <p class="member-edu">M.Arch, Manipal University</p>
+                    <a class="member-email" href="mailto:s.patel@architectshive.com">s.patel@architectshive.com</a>
+                </article>
+            </div>
+
+            <h3 class="team-group-title">Engineering</h3>
+            <div class="team-gallery">
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=640&q=70" alt="S. Emani – Senior Engineer (Structures)">
+                    </div>
+                    <h3 class="member-name">S. Emani</h3>
+                    <p class="member-role">Senior Engineer (Structures)</p>
+                    <p class="member-edu">M.Tech (Structures), IIT Roorkee</p>
+                    <a class="member-email" href="mailto:s.emani@architectshive.com">s.emani@architectshive.com</a>
+                </article>
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1502767089025-6572583495b0?auto=format&fit=crop&w=640&q=70" alt="R. Singh – MEP Engineer">
+                    </div>
+                    <h3 class="member-name">R. Singh</h3>
+                    <p class="member-role">MEP Engineer</p>
+                    <p class="member-edu">B.Tech (Mechanical), DTU</p>
+                    <a class="member-email" href="mailto:r.singh@architectshive.com">r.singh@architectshive.com</a>
+                </article>
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=640&q=70" alt="K. Rao – Civil Engineer">
+                    </div>
+                    <h3 class="member-name">K. Rao</h3>
+                    <p class="member-role">Civil Engineer</p>
+                    <p class="member-edu">B.Tech (Civil), IIT Madras</p>
+                    <a class="member-email" href="mailto:k.rao@architectshive.com">k.rao@architectshive.com</a>
+                </article>
+            </div>
+
+            <h3 class="team-group-title">Interiors</h3>
+            <div class="team-gallery">
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=640&q=70" alt="R. Kaur – Interior Lead">
+                    </div>
+                    <h3 class="member-name">R. Kaur</h3>
+                    <p class="member-role">Interior Lead</p>
+                    <p class="member-edu">M.Des, NID</p>
+                    <a class="member-email" href="mailto:r.kaur@architectshive.com">r.kaur@architectshive.com</a>
+                </article>
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=640&q=70" alt="M. Kapoor – Interior Designer">
+                    </div>
+                    <h3 class="member-name">M. Kapoor</h3>
+                    <p class="member-role">Interior Designer</p>
+                    <p class="member-edu">B.Des, NIFT</p>
+                    <a class="member-email" href="mailto:m.kapoor@architectshive.com">m.kapoor@architectshive.com</a>
+                </article>
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=640&q=70" alt="A. Joshi – 3D Visualizer">
+                    </div>
+                    <h3 class="member-name">A. Joshi</h3>
+                    <p class="member-role">3D Visualizer</p>
+                    <p class="member-edu">Diploma in 3D Design</p>
+                    <a class="member-email" href="mailto:a.joshi@architectshive.com">a.joshi@architectshive.com</a>
+                </article>
+            </div>
+
+            <h3 class="team-group-title">Project Management</h3>
+            <div class="team-gallery">
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=640&q=70" alt="V. Gupta – Planning Manager">
+                    </div>
+                    <h3 class="member-name">V. Gupta</h3>
+                    <p class="member-role">Planning Manager</p>
+                    <p class="member-edu">PMP, B.Tech (Civil), NIT</p>
+                    <a class="member-email" href="mailto:v.gupta@architectshive.com">v.gupta@architectshive.com</a>
+                </article>
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?auto=format&fit=crop&w=640&q=70" alt="H. Khan – Site Manager">
+                    </div>
+                    <h3 class="member-name">H. Khan</h3>
+                    <p class="member-role">Site Manager</p>
+                    <p class="member-edu">B.E. (Civil), AMU</p>
+                    <a class="member-email" href="mailto:h.khan@architectshive.com">h.khan@architectshive.com</a>
+                </article>
+                <article class="member-card">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=640&q=70" alt="D. Nair – Procurement Lead">
+                    </div>
+                    <h3 class="member-name">D. Nair</h3>
+                    <p class="member-role">Procurement Lead</p>
+                    <p class="member-edu">MBA (Operations), IIM</p>
+                    <a class="member-email" href="mailto:d.nair@architectshive.com">d.nair@architectshive.com</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery carousel -->
+    <section class="about-section gallery-section">
+        <div class="container">
+            <h2 class="section-heading">Gallery</h2>
+            <div class="gallery-carousel" role="region" aria-label="Company gallery">
+                <button class="gallery-nav prev" id="aboutGalleryPrev" aria-label="Previous">&#10094;</button>
+                <div class="gallery-viewport">
+                    <div class="gallery-track" id="aboutGalleryTrack">
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1600&q=70" alt="Modern residence exterior">
+                            <div class="gallery-caption">Contemporary villa elevation with floating slab and warm wood soffits.</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=70" alt="Lobby interior design">
+                            <div class="gallery-caption">Sunlit lobby with double‑height glazing and minimal material palette.</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=70" alt="Office workspace">
+                            <div class="gallery-caption">Flexible workspace planned for collaboration and quiet focus zones.</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=70" alt="Facade detail">
+                            <div class="gallery-caption">Dynamic facade rhythm using glass, concrete and brushed metal.</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=70" alt="Living room interior">
+                            <div class="gallery-caption">Warm interior with natural light, neutral tones and crafted joinery.</div>
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=70" alt="City skyline">
+                            <div class="gallery-caption">Urban skyline inspiring our contextual approach to design.</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="gallery-nav next" id="aboutGalleryNext" aria-label="Next">&#10095;</button>
+            </div>
+            <div class="gallery-dots" id="aboutGalleryDots" aria-hidden="true"></div>
+        </div>
+    </section>
+
+    </main>
+
+    <div id="site-footer"></div>
+    <script>
+    (function(){
+      fetch('partials/footer.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-footer');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('footerLoaded'));
+        })
+        .catch(function(){ /* ignore if missing */ });
+    })();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>
+
+
+
