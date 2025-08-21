@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="new_footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
@@ -299,17 +300,17 @@
     <div id="site-footer"></div>
     <script>
     (function(){
-      fetch('partials/footer.html', { cache: 'no-cache' })
+      fetch('partials/new_footer.html', { cache: 'no-cache' })
         .then(function(r){ return r.text(); })
         .then(function(html){
           var mount = document.getElementById('site-footer');
           if (mount) { mount.innerHTML = html; }
-          document.dispatchEvent(new Event('footerLoaded'));
         })
         .catch(function(){ /* ignore if missing */ });
     })();
     </script>
 
+    <script src="new_footer.js"></script>
     <script src="script.js"></script>
     <script src="about.js"></script>
 </body>

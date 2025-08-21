@@ -1,0 +1,399 @@
+/* CSS Variables for Color Scheme */
+:root {
+    --primary-color: #f52008; /* Red */
+    --secondary-color: #0f0f0f; /* Dark Blue-Black */
+    --light-color: #ecf0f1; /* Light Grey */
+    --dark-color: #34495e; /* Dark Grey */
+    --text-color: #333333; /* Dark Grey */
+    --light-text: #ffffff; /* White */
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 94%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+#new-footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 70px 0 20px;
+    position: relative;
+    margin-top: 60px;
+}
+
+#new-footer .container {
+    padding-left: 8px; /* Fine-tuned to match header container padding */
+    width: 96%; /* Match header container width */
+    max-width: 1400px; /* Match header container max-width */
+}
+
+#new-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary-color);
+    background: linear-gradient(to right, var(--primary-color), #ff7846, var(--primary-color));
+}
+
+#new-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+#new-footer .footer-logo {
+    flex: 1 1 250px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0; /* Reset to default and use container padding instead */
+    padding-left: 0; /* Ensure no padding affects alignment */
+}
+
+#new-footer .footer-logo img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 10px;
+    /* Matches header logo size */
+}
+
+#new-footer .footer-logo-link {
+    display: inline-flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 0; /* Ensure no padding pushes logo right */
+}
+
+#new-footer .company-description {
+    color: #bdc3c7;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 12px 0;
+    max-width: 320px;
+}
+
+#new-footer .footer-social {
+    margin-top: 15px;
+}
+
+#new-footer .footer-social h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+#new-footer .footer-social h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+#new-footer .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#new-footer .footer-links {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    flex: 2 1 600px;
+}
+
+#new-footer .footer-column {
+    flex: 1 1 160px;
+}
+
+#new-footer .footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+#new-footer .footer-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+#new-footer .footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+#new-footer .footer-column ul li {
+    margin-bottom: 7px;
+}
+
+#new-footer .project-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+#new-footer .project-list i {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+#new-footer .project-list a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 100%;
+}
+
+#new-footer .footer-column ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+#new-footer .footer-column ul li a:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+#new-footer .contact-info li {
+    display: flex;
+    align-items: flex-start;
+    color: #bdc3c7;
+    gap: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+#new-footer .contact-info li i {
+    color: var(--primary-color);
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+#new-footer .contact-info li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#new-footer .contact-info li a:hover {
+    color: var(--primary-color);
+}
+
+#new-footer .address-link {
+    display: inline-block;
+}
+
+#new-footer .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-text);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+#new-footer .social-icons a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+#new-footer .footer-newsletter {
+    margin-top: 20px;
+}
+
+#new-footer .footer-newsletter h4 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    font-weight: normal;
+}
+
+#new-footer .footer-newsletter-form {
+    display: flex;
+    gap: 8px;
+    max-width: 280px;
+}
+
+#new-footer .footer-newsletter-form input {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+#new-footer .footer-newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#new-footer .footer-subscribe-btn {
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.8rem;
+}
+
+#new-footer .footer-subscribe-btn:hover {
+    background-color: #ff5a3c;
+}
+
+#new-footer .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 992px) {
+    #new-footer .footer-content {
+        flex-direction: column;
+    }
+    
+    #new-footer .footer-logo {
+        margin-bottom: 30px;
+        text-align: center;
+        margin-left: 0; /* Reset left margin on smaller screens */
+    }
+    
+    #new-footer .footer-logo-link {
+        justify-content: center; /* Center logo in container */
+    }
+    
+    #new-footer .footer-logo p {
+        margin: 0 auto;
+    }
+    
+    #new-footer .footer-links {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    #new-footer {
+        padding: 50px 0 20px;
+    }
+    
+    #new-footer .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    #new-footer .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #new-footer .footer-column {
+        text-align: center;
+    }
+    
+    #new-footer .social-icons {
+        justify-content: center;
+    }
+    
+    #new-footer .contact-info li {
+        justify-content: center;
+    }
+    
+    /* Ensure logo is perfectly centered on mobile */
+    #new-footer .footer-logo {
+        align-items: center;
+        padding: 0;
+    }
+    
+    #new-footer .company-description {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+        
+    #new-footer .footer-newsletter-form {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #new-footer .footer-newsletter-form input {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    #new-footer .footer-subscribe-btn {
+        width: 100%;
+        padding: 10px 12px;
+    }
+}
+
+/* iPhone SE (375x667) */
+@media (max-width: 375px) {
+    #new-footer .footer-column h3 {
+        font-size: 1.1rem;
+    }
+
+    #new-footer .project-list a, #new-footer .contact-info a {
+        font-size: 0.9rem;
+    }
+}
+
+/* iPhone XR (414x896) */
+@media (max-width: 414px) {
+    #new-footer .footer-column h3 {
+        font-size: 1.15rem;
+    }
+}

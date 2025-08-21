@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="carousel.css">
     <link rel="stylesheet" href="lightbox.css">
     <link rel="stylesheet" href="projects-listing.css">
+    <link rel="stylesheet" href="new_footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -199,17 +200,17 @@
     <div id="site-footer"></div>
     <script>
     (function(){
-      fetch('partials/footer.html', { cache: 'no-cache' })
+      fetch('partials/new_footer.html', { cache: 'no-cache' })
         .then(function(r){ return r.text(); })
         .then(function(html){
           var mount = document.getElementById('site-footer');
           if (mount) { mount.innerHTML = html; }
-          document.dispatchEvent(new Event('footerLoaded'));
         })
-        .catch(function(){});
+        .catch(function(){ /* ignore if missing */ });
     })();
     </script>
 
+    <script src="new_footer.js"></script>
     <script src="script.js"></script>
     <script src="showcase.js"></script>
     <script src="showcase-nav.js"></script>
