@@ -175,9 +175,9 @@ body {
 }
 
 #new-footer .project-list a {
-    white-space: nowrap;
+    /* white-space: nowrap; */ /* Removed to fix Safari flexbox wrapping issue */
     overflow: hidden;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */ /* Requires nowrap */
     display: block;
     max-width: 100%;
 }
