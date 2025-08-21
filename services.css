@@ -1,0 +1,209 @@
+/* services.css */
+
+/* Hero Section Styles (similar to about page) */
+.services-hero {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 70vh; /* Updated to match about.html hero height */
+    padding: 170px 0 100px; /* Updated to match about.html hero padding */
+    box-sizing: border-box;
+}
+
+.services-hero .hero-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.services-hero .hero-media::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.services-hero .hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Reusing profile-card style from about page for consistency */
+.services-hero .profile-card {
+    background: rgba(15, 15, 15, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.services-hero .profile-title {
+    font-size: clamp(1.7rem, 4.8vw + 0.2rem, 3.0rem);
+    font-weight: 800;
+    text-transform: none;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 14px;
+    display: inline-block;
+    color: #fff;
+}
+
+.services-hero .profile-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 4px; /* Moved up slightly */
+    width: 140px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 3px;
+    box-shadow: 0 0 16px rgba(245,32,8,.35);
+    transform: translateX(-50%);
+}
+
+.services-hero .profile-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ecf0f1;
+    margin-top: 22px; /* Added margin to move it down */
+}
+
+/* Services Grid Section */
+.services-grid-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+/* Section Heading */
+.section-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-heading::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden; /* Important for containing the image's corners */
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-color);
+}
+
+.service-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image-container img {
+    transform: scale(1.05);
+}
+
+.service-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 20px 20px 10px 20px; /* Add padding back as margin */
+}
+
+.service-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #6b7280;
+    margin: 0 20px 20px 20px; /* Add padding back as margin */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .services-hero {
+        min-height: 70vh; /* Match projects.css hero height */
+        padding: 140px 0 80px; /* Match projects.css padding */
+        margin-top: 0;
+    }
+
+    .services-hero .profile-title {
+        font-size: 2.2rem;
+    }
+
+    .services-hero .profile-card {
+        padding: 1.5rem;
+    }
+
+    .services-grid-section {
+        padding: 40px 0;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .services-hero {
+        min-height: 70vh; /* Keep consistent with larger mobile screens */
+        padding: 120px 0 60px; /* Adjusted padding for very small screens */
+    }
+    
+    .services-hero .profile-title {
+        font-size: 1.8rem;
+    }
+    
+    .services-hero .profile-text {
+        font-size: 1rem;
+    }
+}

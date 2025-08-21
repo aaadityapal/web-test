@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - ArchitectsHive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="new_footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <div id="site-header"></div>
+    <script>
+    (function(){
+      fetch('partials/header.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-header');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('headerLoaded'));
+        })
+        .catch(function(){ /* ignore if missing */ });
+    })();
+    </script>
+
+    <main id="services" class="services-page">
+        <!-- Hero Section -->
+        <section class="services-hero">
+            <div class="hero-media" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1920&q=80" alt="Professional team working on a project">
+            </div>
+            <div class="container">
+                <div class="profile-card" role="region" aria-label="Our Services">
+                    <h1 class="profile-title">Our Services</h1>
+                    <p class="profile-text">Welcome to ArchitectsHive, your one-stop destination for exceptional architectural services! At ArchitectsHive, we are dedicated to transforming your visions into reality through innovative and thoughtful design solutions. Our expert team of architects, designers, and professionals collaborates closely with clients to understand their unique needs, aspirations, and functional requirements.
+
+                        Whether you're looking to design your dream home, revitalize your commercial space, or em</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="services-grid-section">
+            <div class="container">
+                <h2 class="section-heading">We Provide</h2>
+                <div class="services-grid">
+                    <!-- Service Card: Architectural Design -->
+                    <div class="service-card">
+                        <div class="service-image-container"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80" alt="Architectural Design"></div>
+                        <h3 class="service-title">Architectural Design</h3>
+                        <p class="service-description">We create functional, safe, and aesthetically pleasing building designs that are tailored to your specific needs and aspirations.</p>
+                    </div>
+                    <!-- Service Card: Vastu -->
+                    <div class="service-card">
+                        <div class="service-image-container"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&q=80" alt="Vastu"></div>
+                        <h3 class="service-title">Vastu</h3>
+                        <p class="service-description">Incorporating traditional principles of Vastu Shastra to create harmonious spaces that promote well-being and prosperity.</p>
+                    </div>
+                    <!-- Service Card: Interior Design -->
+                    <div class="service-card">
+                        <div class="service-image-container"><img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=500&q=80" alt="Interior Design"></div>
+                        <h3 class="service-title">Interior Design</h3>
+                        <p class="service-description">Transforming interiors into beautiful and functional spaces that reflect your personal style and enhance your quality of life.</p>
+                    </div>
+                    <!-- Service Card: Turnkey -->
+                    <div class="service-card">
+                        <div class="service-image-container"><img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=500&q=80" alt="Turnkey Projects"></div>
+                        <h3 class="service-title">Turnkey Projects</h3>
+                        <p class="service-description">Providing end-to-end solutions, from initial concept to final handover, ensuring a seamless and hassle-free experience.</p>
+                    </div>
+                    <!-- Service Card: Landscape -->
+                    <div class="service-card">
+                        <div class="service-image-container"><img src="https://images.unsplash.com/photo-1542259003-15c598a35414?w=500&q=80" alt="Landscape Design"></div>
+                        <h3 class="service-title">Landscape Design</h3>
+                        <p class="service-description">Crafting beautiful and sustainable outdoor spaces that connect with nature and complement the built environment.</p>
+                    </div>
+                    <!-- Service Card: Structural -->
+                    <div class="service-card">
+                        <div class="service-image-container"><img src="https://images.unsplash.com/photo-1598994321395-a8a8a3a15811?w=500&q=80" alt="Structural Design"></div>
+                        <h3 class="service-title">Structural Design</h3>
+                        <p class="service-description">Ensuring the stability, strength, and rigidity of structures through meticulous engineering and analysis.</p>
+                    </div>
+                    <!-- Service Card: MEP -->
+                    <div class="service-card">
+                        <div class="service-image-container"><img src="https://images.unsplash.com/photo-1581092916376-02399a435e32?w=500&q=80" alt="MEP Design"></div>
+                        <h3 class="service-title">MEP Design</h3>
+                        <p class="service-description">Expert design of Mechanical, Electrical, and Plumbing systems for efficient and sustainable building performance.</p>
+                    </div>
+                    <!-- Service Card: Estimation and Valuation -->
+                    <div class="service-card">
+                        <div class="service-image-container"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&q=80" alt="Estimation & Valuation"></div>
+                        <h3 class="service-title">Estimation & Valuation</h3>
+                        <p class="service-description">Accurate cost estimation and property valuation services to support your financial planning and investment decisions.</p>
+                    </div>
+                    <!-- Service Card: Renovation -->
+                    <div class="service-card">
+                        <div class="service-image-container"><img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?w=500&q=80" alt="Renovation"></div>
+                        <h3 class="service-title">Renovation</h3>
+                        <p class="service-description">We specialize in transforming existing spaces, whether it's a complete home makeover or a commercial upgrade, to meet your modern needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script>
+    (function(){
+      fetch('partials/new_footer.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-footer');
+          if (mount) { mount.innerHTML = html; }
+        })
+        .catch(function(){ /* ignore if missing */ });
+    })();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="new_footer.js"></script>
+    <script>
+    // Ensure mobile menu initialization runs after page load
+    window.addEventListener('load', function() {
+        if(typeof initHeaderInteractions === 'function') {
+            initHeaderInteractions();
+        }
+    });
+    </script>
+</body>
+</html>
