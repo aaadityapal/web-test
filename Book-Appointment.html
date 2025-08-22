@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Architectural Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="book-appointment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="new_footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="site-header"></div>
+    <script>
+    (function(){
+      fetch('partials/header.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-header');
+          if (mount) { mount.innerHTML = html; }
+          document.dispatchEvent(new Event('headerLoaded'));
+        })
+        .catch(function(){ /* ignore if missing */ });
+    })();
+    </script>
+
+    <main class="appointment-page">
+        <section class="appointment-hero">
+            <div class="hero-background" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1920&q=80" alt="Architectural planning session">
+            </div>
+            <div class="blur-box-container">
+                <div class="blur-background-box">
+                    <h1>Book Your Appointment</h1>
+                    <p>Schedule a consultation with our expert architects at your convenience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bap-ondemand-section">
+            <div class="container">
+                <div class="bap-scroller-card">
+                    <h2 class="bap-scroller-title"><span class="text-primary-color">Hire Us</span> For A Day!</h2>
+                    <p class="bap-scroller-subtitle">Get professional assistance for your architectural needs in Noida, Delhi, or NCR. Our experts are available from 11 AM to 4 PM.</p>
+                    <div class="bap-scroller-view">
+                        <div class="bap-scroller-track">
+                            <div class="bap-service-item"><span>🔧</span> Material suggestions</div>
+                            <div class="bap-service-item"><span>🛒</span> Market material selection</div>
+                            <div class="bap-service-item"><span>🪑</span> Furniture arrangement</div>
+                            <div class="bap-service-item"><span>🛠️</span> Site visits</div>
+                            <div class="bap-service-item"><span>🔍</span> Contractors' work cross-checking</div>
+                            <div class="bap-service-item"><span>🧘‍♂️</span> Vastu consultation</div>
+                            <div class="bap-service-item"><span>🏢</span> Structural stability check</div>
+                            <!-- Duplicates for infinite scroll -->
+                            <div class="bap-service-item"><span>🔧</span> Material suggestions</div>
+                            <div class="bap-service-item"><span>🛒</span> Market material selection</div>
+                            <div class="bap-service-item"><span>🪑</span> Furniture arrangement</div>
+                            <div class="bap-service-item"><span>🛠️</span> Site visits</div>
+                            <div class="bap-service-item"><span>🔍</span> Contractors' work cross-checking</div>
+                            <div class="bap-service-item"><span>🧘‍♂️</span> Vastu consultation</div>
+                            <div class="bap-service-item"><span>🏢</span> Structural stability check</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bap-options-wrapper">
+            <div class="container">
+                <div class="bap-layout-grid">
+                    <div class="bap-static-card">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80" alt="Virtual Consultation" class="bap-static-card-img">
+                        <div class="bap-static-card-icon"><i class="fas fa-video"></i></div>
+                        <h3>Virtual Consultation</h3>
+                        <p>Schedule a virtual meeting with our experts via Google Meet to discuss your project from anywhere in the world.</p>
+                        <a href="#" class="submit-btn">Schedule a Meeting</a>
+                    </div>
+
+                    <div class="bap-static-card">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80" alt="Hire Our Professional Team" class="bap-static-card-img">
+                        <div class="bap-static-card-icon"><i class="fas fa-users"></i></div>
+                        <h3>Hire Our Professional Team</h3>
+                        <p>Ready to build? Hire our dedicated team of architects and engineers to bring your vision to life with precision and excellence.</p>
+                        <a href="#contact" class="submit-btn">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="site-footer"></div>
+    <script>
+    (function(){
+      fetch('partials/new_footer.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-footer');
+          if (mount) { mount.innerHTML = html; }
+        })
+        .catch(function(){ /* ignore if missing */ });
+    })();
+    </script>
+
+    <script src="new_footer.js"></script>
+    <script src="script.js"></script>
+    <script src="book-appointment.js"></script>
+    <script>
+    // Ensure mobile menu initialization runs after page load
+    window.addEventListener('load', function() {
+        if(typeof initHeaderInteractions === 'function') {
+            initHeaderInteractions();
+        }
+    });
+    </script>
+</body>
+</html>
