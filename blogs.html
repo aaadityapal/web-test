@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Architectural Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="showcase.css">
+    <link rel="stylesheet" href="blogs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="new_footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <div id="site-header"></div>
+   
+    <main id="showcase" class="showcase-page" aria-labelledby="showcaseTitle">
+        <section class="showcase-hero">
+            <div class="hero-background" aria-hidden="true">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=80" alt="Modern architecture" width="1920" height="1080">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" alt="Residential architecture" width="1920" height="1080">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1577493340887-b7bfff550145?auto=format&fit=crop&w=1920&q=80" alt="Commercial architecture" width="1920" height="1080">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=1920&q=80" alt="Institutional architecture" width="1920" height="1080">
+                </div>
+            </div>
+            <div class="blur-box-container">
+                <div class="blur-background-box">
+                    <h1 id="showcaseTitle"><span id="typewriter">Our Blogs</span></h1>
+                    <p class="showcase-tagline">Sharing our passion for architecture, design, and innovation. Explore our thoughts on the latest trends and timeless principles that shape the built environment.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="blogs-section">
+        <div class="container">
+            <h1 class="blogs-title">Our Blog</h1>
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Blog Post Image">
+                    <div class="blog-post-content">
+                        <h2>The Future of Sustainable Architecture</h2>
+                        <p class="blog-meta">Published on August 22, 2025 by Admin</p>
+                        <p>Sustainable architecture is not just a trend; it's a necessity. In this post, we explore the latest innovations and materials that are shaping the future of green buildings...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1588891989168-30970a22a33a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Blog Post Image">
+                    <div class="blog-post-content">
+                        <h2>Minimalism in Modern Home Design</h2>
+                        <p class="blog-meta">Published on August 20, 2025 by Admin</p>
+                        <p>Discover how minimalism can create a sense of space and tranquility in your home. We'll share tips and examples of how to achieve a minimalist aesthetic without sacrificing comfort or personality...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Blog Post Image">
+                    <div class="blog-post-content">
+                        <h2>Integrating Smart Home Technology</h2>
+                        <p class="blog-meta">Published on August 18, 2025 by Admin</p>
+                        <p>Smart home technology is revolutionizing the way we live. From automated lighting to intelligent security systems, learn how to seamlessly integrate these features into your architectural plans...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+    <script>
+    (function(){
+      fetch('partials/new_footer.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-footer');
+          if (mount) { mount.innerHTML = html; }
+        })
+        .catch(function(){ /* ignore if missing */ });
+    })();
+    </script>
+
+    <script src="new_footer.js"></script>
+    <script src="script.js"></script>
+    <script src="showcase.js"></script>
+    <script src="blogs.js"></script>
+</body>
+<body>
+    <div id="site-header"></div>
+    
+
+    <section class="blogs-section">
+        <div class="container">
+            <h1 class="blogs-title">Our Blog</h1>
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Blog Post Image">
+                    <div class="blog-post-content">
+                        <h2>The Future of Sustainable Architecture</h2>
+                        <p class="blog-meta">Published on August 22, 2025 by Admin</p>
+                        <p>Sustainable architecture is not just a trend; it's a necessity. In this post, we explore the latest innovations and materials that are shaping the future of green buildings...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1588891989168-30970a22a33a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Blog Post Image">
+                    <div class="blog-post-content">
+                        <h2>Minimalism in Modern Home Design</h2>
+                        <p class="blog-meta">Published on August 20, 2025 by Admin</p>
+                        <p>Discover how minimalism can create a sense of space and tranquility in your home. We'll share tips and examples of how to achieve a minimalist aesthetic without sacrificing comfort or personality...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Blog Post Image">
+                    <div class="blog-post-content">
+                        <h2>Integrating Smart Home Technology</h2>
+                        <p class="blog-meta">Published on August 18, 2025 by Admin</p>
+                        <p>Smart home technology is revolutionizing the way we live. From automated lighting to intelligent security systems, learn how to seamlessly integrate these features into your architectural plans...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+    <script>
+    (function(){
+      fetch('partials/new_footer.html', { cache: 'no-cache' })
+        .then(function(r){ return r.text(); })
+        .then(function(html){
+          var mount = document.getElementById('site-footer');
+          if (mount) { mount.innerHTML = html; }
+        })
+        .catch(function(){ /* ignore if missing */ });
+    })();
+    </script>
+
+    <script src="new_footer.js"></script>
+    <script src="script.js"></script>
+    <script src="blogs.js"></script>
+</body>
+</html>
